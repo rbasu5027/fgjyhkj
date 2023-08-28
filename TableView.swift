@@ -28,9 +28,11 @@ struct TableView: View {
         ]
                
                 List(players, id: \.name) { player in
-                                VStack(alignment: .leading) {
-                                    Text(player.position)
-                                        .font(.headline)
+                    HStack{   VStack(alignment: .leading) {
+                        Text(player.position)
+                            .font(.headline)
+                    }
+                        Spacer()
                                     Text(player.name)
                                         .font(.subheadline)
                                         .foregroundColor(.secondary)
